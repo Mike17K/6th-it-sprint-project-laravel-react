@@ -19,5 +19,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('events', 'App\Http\Controllers\EventController');
+Route::apiResource('applications', 'App\Http\Controllers\ApplicationController');
+Route::apiResource('answers', 'App\Http\Controllers\AnswerController');
+Route::apiResource('questions', 'App\Http\Controllers\QuestionController');
+Route::apiResource('rating', 'App\Http\Controllers\RatingController');
+
+
 
 
