@@ -1,0 +1,16 @@
+FROM node:lts-bullseye
+
+ARG LOCALUSERID
+ARG LOCALGROUPID
+
+# create user with same gid and id as current user, each if it does not exist already
+RUN getent group ${LOCALGROUPID} || addgroup --gid $LOCALGROUPID react && id ${LOCALUSERID} || adduser --uid $LOCALUSERID --gid $LOCALGROUPID react
+
+USER ${LOCALUSERID}
+
+# Expose port 3000
+EXPOSE 3000
+
+WORKDIR /docker/frontend/
+
+CMD ["sleep", "infinity"]

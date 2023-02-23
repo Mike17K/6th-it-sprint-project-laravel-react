@@ -1,0 +1,16 @@
+FROM registry.gitlab.com/eestec/eestec.net-backend/development-base:0.0.1
+
+ARG LOCALUSERID
+ARG LOCALGROUPID
+
+# create user with same gid and id as current user, each if it does not exist already
+RUN getent group ${LOCALGROUPID} || addgroup --gid $LOCALGROUPID laravel && id ${LOCALUSERID} || adduser --uid $LOCALUSERID --gid $LOCALGROUPID laravel
+
+USER laravel
+
+# Expose port 8000
+EXPOSE 8000
+
+WORKDIR /docker/backend/
+
+CMD ["sleep", "infinity"]

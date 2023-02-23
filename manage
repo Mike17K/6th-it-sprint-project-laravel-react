@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#
+#   Wrapper around docker compose to make sure the containers use the same group_id:user_id as the local system
+#
+
+export LOCALGROUPID="$(id -g)"
+export LOCALUSERID="$UID"
+
+## Parse mode
+if [[ $# -lt 1 ]]; then
+    exit 0
+fi
+
+docker compose $@

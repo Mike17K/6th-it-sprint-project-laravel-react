@@ -1,92 +1,150 @@
-# three-apples
+# 6th IT Sprint
 
-
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/eestec/it-sprint/three-apples.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/eestec/it-sprint/three-apples/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+Welcome to the main repo of the 6th IT Sprint, hosted by LC Skopje! The IT Team is exited to have you here and take you on a journey through the layers of a stack for modern web apps.
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+At the 6th IT Sprint we will develop from within docker containers. This is to achieve more or less uniform development environments and save us from the messiness of many different dependency versions and operating systems.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+### Docker
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+What even is docker? We cover this in [week one of the event preparations!](week1/knowledge.md)
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Docker comes as a pure command line utility and as a desktop application (that also includes the cli programs). For Windows and Mac
+we recommend installing the desktop application, on linux the command line utility is sufficient.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+#### Windows
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+**Warning**: Docker installation instructions state that at least 4GBs of RAM are required, but from
+my experience even 8GB might not be enough to run everything together with your usual Windows tasks
+(since WSL is a whole VM inside Windows).
+If you have a low-end laptop and/or don't have access to any stronger or linux machine, please contact us.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+- [Enable WSL and install Ubuntu](https://learn.microsoft.com/en-us/windows/wsl/install)
+- [Install Docker Desktop](https://docs.docker.com/desktop/install/windows-install/)
 
-## License
-For open source projects, say how it is licensed.
+#### MacOS
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- [Install Docker Desktop](https://docs.docker.com/desktop/install/mac-install/)
+
+#### Linux
+
+- Install Docker (no need to install Docker Desktop)
+  - You can ind the instructions for your distribution [here](https://docs.docker.com/engine/install/). We recommend
+    using the Docker repository, rather than the one from your distribution, since they have quite older versions.
+- Install VSCode
+
+### VSCode
+
+**Warning**: We only support VSCode for development, if you face any issues on the editor of your choice
+(which for the most part you shouldn't face anyway), we might not be able to help.
+
+- [Install VSCode](https://code.visualstudio.com/)
+- Setup VSCode
+  - Install the following extensions:
+    - Required:
+      - [docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+      - **Necessary Windows only (but useful in general)**: [Remote development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) (extension pack) - Used in Windows for connecting VSCode to WSL, but
+      can also be used for remote connecting to containers.
+    - Suggested:
+      - [VSCode extensions useful for front-end work.](https://gitlab.com/eestec/eestec-net/eestec.net-frontend/-/wikis/Editors)
+
+## Deployment (Linux & Mac)
+
+Make sure you have this repository [cloned to your local machine](pre-event-preparations/week1/knowledge.md)!
+
+
+The script `manage` is a wrapper around docker compose. We use it to make sure that the containers the containers use the same group_id:user_id as the local system.
+
+```bash
+./manage build
+./manage up -d
+```
+
+You successfully ran those commands if your output to `docker ps` looks something like this:
+
+```bash
+> docker ps
+CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS         PORTS                                                 NAMES
+c49eba663bef   6th-it-sprint-laravel   "docker-php-entrypoi…"   35 seconds ago   Up 3 seconds   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 9000/tcp   backend
+0519ef8ca2c7   dpage/pgadmin4          "/entrypoint.sh"         35 seconds ago   Up 3 seconds   443/tcp, 0.0.0.0:5050->80/tcp, :::5050->80/tcp        pgadmin
+cd2673db1757   postgres                "docker-entrypoint.s…"   36 seconds ago   Up 4 seconds   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp             postgres
+448f99a76904   6th-it-sprint-react     "docker-entrypoint.s…"   36 seconds ago   Up 4 seconds   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp             frontend
+```
+
+## Deployment on Windows
+
+We will primarily be using WSL for working on the infrastructure. As we mentioned WSL is a separate virtual machine, so you can treat it as
+a separate computer sort of.
+
+1. Check that git is installed. Test if git is installed with `git -v`.
+2. Copy the ssh key you created for gitlab to wsl. If your username is leonidas, it would look like
+
+     ```bash
+     wsl # Connect to the virtual machine
+     cd ~ # Go to the home folder
+     cp /mnt/c/Users/Leonidas/.ssh/id_ed25519_sk ~/.ssh/ # Copy the key
+     chmod 600 ~/.ssh/id_ed25519_sk # Change permissions to the key
+     ```
+
+3. Clone the repository as described in [week 1](pre-event-preparations/week1/knowledge.md)!
+4. Make sure that frontend and backend folders have the correct permissions and are owned by your user.
+
+    ```bash
+    whoami # Figure out your username, for me lavdelas
+    sudo chown -R lavdelas:lavdelas frontend/ backend/
+    ```
+
+5. Follow the instructions described for Linux to run the manage command (see above).
+
+## Use the Environment
+
+If you achieved to get the output above, you have everything running on your computer that you will need to develop leveraging the tech stack we intend to teach at the 6th IT Sprint. Each line of that output represents one _container_.
+
+You can think of a container as a simulation of another computer, running on your computer. We will use the two containers named backend and frontend to code inside. The folders 'backend' and 'frontend' of this repo will be available to the respective containers.
+
+To connect to ('get inside of') a container, open the docker extension in VSCode, right-click the desired container and select connect console:
+
+![screen recording](docs/DockerAttachToShell.gif)
+
+You now have access to the shell of the simulated computer (the container). The backend/frontend containers each have all the necessary tools installed that you will need to learn the respective technologies.
+
+## Start a React Project
+
+To create a react project run:
+
+```bash
+yarn create react-app .
+```
+
+Then to run the project, run `yarn start`. This should be enough to get you started.
+
+## Start a Laravel Project
+
+Inside the backend container run:
+
+```bash
+composer create-project laravel/laravel .
+```
+
+Then copy DB configuration from top level `.env` file to `backend/.env` file.
+
+Once the Laravel project has been set up and the .env file was adjusted, move to the project folder and run the application using the following command:
+
+```bash
+php artisan serve --host 0.0.0.0
+```
+
+The expected output is the following:
+
+```bash
+INFO  Server running on [http://127.0.0.1:8000].
+```
+
+where you ctrl+click the link in order to open it in the browser, or you copy-paste the link in your browser directly.
+
+## Running your PHP files
+
+In order to run your PHP files, please attach a shell (as explained before) to your backend, open the terminal and run the `php file_name.php` command.
+
+![screen recording](docs/DockerPHP.gif)

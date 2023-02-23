@@ -1,0 +1,60 @@
+services:
+  postgres:
+    image: postgres
+    restart: always
+    container_name: postgres
+    hostname: postgres.docker
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+    volumes:
+      - postgres:/var/lib/postgresql/data:rw
+    environment:
+      POSTGRES_DB: "${DB_DATABASE}"
+      POSTGRES_PASSWORD: "${DB_PASSWORD}"
+      POSTGRES_USER: "${DB_USERNAME}"
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "${PGADMIN_DEFAULT_EMAIL}"
+      PGADMIN_DEFAULT_PASSWORD: "${PGADMIN_DEFAULT_PASSWORD}"
+  laravel:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+      args:
+        LOCALUSERID: $LOCALUSERID
+        LOCALGROUPID: $LOCALGROUPID
+    container_name: backend
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - "8000:8000"
+    volumes:
+      - "${BACKEND_FOLDER}:/docker/backend/"
+
+  react:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+      args:
+        LOCALUSERID: $LOCALUSERID
+        LOCALGROUPID: $LOCALGROUPID
+    container_name: frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - "${FRONTEND_FOLDER}:/docker/frontend/"
+
+networks:
+  default:
+    name: its
+volumes:
+  postgres:

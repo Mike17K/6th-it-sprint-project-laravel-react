@@ -1,0 +1,11 @@
+- Alex: Bulgogi, marinated beef, to be enjoyed with friends at a barbecue
+- Andjela: veggie sarma, typical december balkan dish ^^
+- Alonso: Paella, Typical Spanish dish with rice and seafood.
+- Anastasis: Souvlaki, Small pieces of meat/vegetables grilled on a skewer
+- Anže: Pizza, a round, cheesy, saucy dish that brings people together for a love-filled slice of heaven. It's the food of champions, the king of carbs, and the answer to all life's problems. So why not put a little smile on your face and have a slice (or five)? 🍕😄
+- Claudiu: Fries, I love fries with something spicy.
+- Dzenana: Pancakes(!!!), a thin, flat cake of batter, fried on both sides in a pan and typically rolled up with a sweet or savoury filling
+- Giovanni: Pizza, usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients. To be enojoyed with anyone, any time of the week!
+- Ipek: pizza, baked dough with toppings and sauce
+- Maksim: Burger, I love a good burger
+- Mike: medium rare steak, a warm, red center that oozes with juicy, beef-forward flavor.
