@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const EventSelectionPage = () => {
   // fetch call for geting the list of events
@@ -9,6 +10,10 @@ const EventSelectionPage = () => {
     { id: 2, name: "event 3" },
   ];
 
+  function deleteEvent(eestecEventId) {
+    // make fetch request for deleting an event of id of eestecEventId, by user of id: this users id
+  }
+
   return (
     <div>
       <h4>EventSelectionPage</h4>
@@ -17,8 +22,11 @@ const EventSelectionPage = () => {
           <div>
             <li key={eestecEvent.id}>{eestecEvent.name}</li>
 
-            <button onClick={() => {}}>Evaluate Applications</button>
-            <button onClick={() => {}}>Delete Event</button>
+            <Link to={"/events/" + eestecEvent.id}>Evaluate Applications</Link>
+
+            <button onClick={() => deleteEvent(eestecEvent.id)}>
+              Delete Event
+            </button>
           </div>
         ))}
       </ul>

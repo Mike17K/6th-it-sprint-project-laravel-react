@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const UploadDataPage = () => {
   const [inputFileValue, setInputFileValue] = useState("");
@@ -42,7 +42,7 @@ const UploadDataPage = () => {
     submitButtonHandler({ filename: newFilename, eventname: inputEventName });
   }
 
-  function onSubmit() {
+  async function onSubmit() {
     console.log(inputFileValue, isDisabled);
 
     // make api call for passing the data to backend

@@ -4,6 +4,8 @@ import Home from './Views/Home/Home';
 import UploadDataPage from './Views/UploadDataPage/UploadDataPage';
 import EventSelectionPage from './Views/EventSelectionPage/EventSelectionPage';
 import NavBar from './Views/NavBar/NavBar';
+import EventPage from './Views/EventPage/EventPage';
+import ApplicationEvaluationPage from './Views/ApplicationEvaluationPage/ApplicationEvaluationPage';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/uploadData" element={<UploadDataPage />} />
           <Route path="/eventSelectionPage" element={<EventSelectionPage />} />
+          <Route path="/events/:eventId" element={<EventPage />} />
+          <Route path="/events/:eventId/:applicationId" element={<ApplicationEvaluationPage />} />
         </Routes>
       </BrowserRouter>
     </div>
