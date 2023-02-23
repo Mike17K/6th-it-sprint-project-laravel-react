@@ -17,12 +17,13 @@ class RatingController extends Controller
     public function store(Request $request) : Response {
         $request->validate([
             'user_id'=> 'required|integer|exists:users,id',
-            'application_id'=> 'required|integer|exists:application,id',
+            'answer_id'=> 'required|integer|exists:answer,id',
             'rating'=> 'required|float|between:0,5',
         ]);
 
         $rating = new Rating;
         $rating->event_id = $request['event_id'];
+        $rating->answer_id = $request['answer_id'];
         $rating->text = $request['text'];
         $rating->save();
         return response($rating, 201);
