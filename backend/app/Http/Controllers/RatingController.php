@@ -10,7 +10,7 @@ class RatingController extends Controller
 {
 
     public function index() : Response {
-        $rating = Rating::filter()->get();
+        $rating = Rating::all();
         return response($rating, 200);
     }
 

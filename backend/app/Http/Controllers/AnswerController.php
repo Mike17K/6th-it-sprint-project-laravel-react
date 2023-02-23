@@ -9,7 +9,8 @@ use Illuminate\Http\Response;
 class AnswerController extends Controller
 {
     public function index() : Response {
-        $answer = Answer::filter()->get();
+        $answer = Answer::all();
+        //$post = Post::all();
         return response($answer, 200);
     }
 

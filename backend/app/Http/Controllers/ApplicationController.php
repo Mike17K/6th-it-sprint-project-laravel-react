@@ -9,7 +9,8 @@ use Illuminate\Http\Response;
 class ApplicationController extends Controller
 {
     public function index() : Response {
-        $application = Application::filter()->get();
+        $application = Application::all();
+
         return response($application, 200);
     }
 
