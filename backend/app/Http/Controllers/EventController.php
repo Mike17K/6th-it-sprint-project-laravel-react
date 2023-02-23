@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Storage;
 class EventController extends Controller
 {
     public function index() : Response {
-        $event = Event::filter()->get();
+        $event = Event::all();
+
         return response($event, 200);
     }
 

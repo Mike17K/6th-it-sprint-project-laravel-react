@@ -10,7 +10,8 @@ class QuestionController extends Controller
 {
 
     public function index() : Response {
-        $question = Question::filter()->get();
+        $question = Question::all();
+
         return response($question, 200);
     }
 

@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Event;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -21,4 +23,15 @@ class EventFactory extends Factory
             'name' => fake()->word(),
         ];
     }
+
+    public function configure()
+    {
+        return $this->afterMaking(function (Event $event) {
+            //
+        })->afterCreating(function (Event $event) {
+            $user = User::all()->random();
+            $event->users()->attach($user);
+        });
+    }
+
 }
