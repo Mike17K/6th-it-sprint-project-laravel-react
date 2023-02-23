@@ -58,7 +58,7 @@ The script `manage` is a wrapper around docker compose. We use it to make sure t
 
 ```bash
 ./manage build
-./manage up -d
+./manage up -dg
 ```
 
 You successfully ran those commands if your output to `docker ps` looks something like this:
