@@ -1,9 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const EventSelectionPage = () => {
+const EventSelectionPage = async () => {
   // fetch call for geting the list of events
   // fetch here
+
+  const res = await fetch("http://localhost:8000/api/events").then((data) =>
+    data.json()
+  );
+  console.log(res);
+
   const eestecEventList = [
     { id: 0, name: "event 1" },
     { id: 1, name: "event 2" },

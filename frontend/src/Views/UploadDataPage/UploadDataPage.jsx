@@ -49,7 +49,6 @@ const UploadDataPage = () => {
     // passing to backend: the csv , the list of authorized users , event name
     //<==================================================================================================== add
     console.log(isCheckedList);
-
     // fetch here
   }
 
