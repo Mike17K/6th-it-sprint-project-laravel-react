@@ -1,0 +1,45 @@
+ /* CSS code */
+
+ .rotate{
+    
+margin-left : 20px;
+margin-bottom: 5px;
+padding: 10px;
+
+ }
+
+ .but:hover {
+    
+    animation: rotate 2s linear infinite;
+    
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+
+    
+}
+
+.rotate:hover {
+    background-color: aqua;
+    animation: scale 2s ease-in-out infinite;
+  }
+  
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
